@@ -1,0 +1,23 @@
+name:                nomyx-rules
+version:             0.1.0.0
+synopsis:            Nomyx Rules.
+description:         A collection of rules for the Nomyx game. See <https://github.com/cdupont/Nomic>.
+license:             BSD3
+license-file:        LICENSE
+author:              Tillmann Rendel
+maintainer:          rendel@informatik.uni-marburg.de
+--copyright:           
+category:            Game
+build-type:          Simple
+cabal-version:       >=1.8
+
+source-repository head
+  type:                git
+  location:            git://github.com/Toxaris/nomyx-rules.git
+
+library
+  hs-source-dirs:      src
+  -- exposed-modules:     
+  -- other-modules:       
+  build-depends:       base ==4.5.*,
+                       Nomyx-Language ==0.2.2
