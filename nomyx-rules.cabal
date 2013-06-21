@@ -18,6 +18,7 @@ source-repository head
 library
   hs-source-dirs:      src
   exposed-modules:     Bank
+                       Withdraw
   -- other-modules:       
   build-depends:       base ==4.5.*,
                        Nomyx-Language ==0.2.2
