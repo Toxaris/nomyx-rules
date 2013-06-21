@@ -5,6 +5,12 @@ import Prelude
 import Language.Nomyx
 import Data.Typeable
 
+-- Copied from the Rules.hs used in the Nomyx live instances.
+getValueOfPlayer :: PlayerNumber -> V [(Int, Int)] -> Nomex (Maybe Int)
+getValueOfPlayer pn var = do
+   value <- readVar_ var
+   return $ lookup pn value
+
 -- Input a Read-able value.
 onInput_ :: Read a => String -> (a -> Nomex ()) -> PlayerNumber -> Nomex ()
 onInput_ title handler player = onInputStringOnce_ title safeHandler player where
